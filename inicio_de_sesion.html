@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Inicio de sesion Profesores</title>
+</head>
+<body>
+    <!--Barra de navegacion-->
+    <nav>
+
+    </nav>
+    <!--Header-->
+    <header>
+
+    </header>
+    <!--Formulario de inicio de sesion-->
+    <section>
+        <div>
+            <h1 class="text-center">Inicio de sesión</h1>
+            <form action="" method="get" class="contenedor_formulario_2 row g-3 needs-validation" novalidate>
+                <div>
+                    <label for="I_inicio_usuario">Usuario:</label>
+                    <input type="text" class="form-control" name="Sesion_usuario" id="I_inicio_usuario" required>
+                    <div class="invalid-feedback">
+                        Por favor ingrese el usuario.
+                    </div>
+                </div>
+                <div>
+                    <label for="I_inicio_contrasena">Contraseña:</label>
+                    <input type="password" class="form-control" name="Sesion_contrasena" id="I_inicio_contrasena" required>
+                    <div class="invalid-feedback">
+                        Por favor ingrese la contraseña.
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" name="btnIngresar_sesion">Iniciar sesión</button>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="text-center">¿No estas registrado? Regístrate <a href="">Aquí</a></li>
+                    <li class="text-center">¿Has olvidado tu contraseña? Restáurala<a href="">Aquí</a></li>
+                </ul>
+            </form>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+
+    </footer>
+    <script src="js/validacion_boostrap.js"></script>
+</body>
+</html>
