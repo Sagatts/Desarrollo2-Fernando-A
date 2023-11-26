@@ -8,6 +8,8 @@ function validar_registro() {
     var registro_cargo = document.getElementById('I_cargo').value;
     var registro_descripcion = document.getElementById('I_descripcion').value;
     var registro_grado = document.getElementById('I_grado').value;
+    var registro_contrasena = document.getElementById('I_contrasena').value;
+    var registro_confirmacion_contrasena = document.getElementById('I_confirmacion_contrasena').value;
 
 
     // Variables que guardan el mensaje de error
@@ -18,6 +20,8 @@ function validar_registro() {
     var mensajeErrorDescripcion = '';
     var mensajeErrorGrado= '';
     var mensajeErrorAreas = '';
+    var mensajeErrorContrasena = '';
+    var mensajeErrorConfirmacionContra = '';
 
     // Condiciones para la validación (separados por que son mensajes diferentes)
     if (registro_nombre === '') {
@@ -52,6 +56,16 @@ function validar_registro() {
         mensajeErrorAreas = 'Seleccione al menos un área de interés';
     }
 
+    if (registro_contrasena === '') {
+        mensajeErrorContrasena = 'Por favor, ingrese su contraseña';
+    }
+
+    if (registro_confirmacion_contrasena === '') {
+        mensajeErrorConfirmacionContra = 'Por favor, confirme su contraseña';
+    } else if (registro_contrasena !== registro_confirmacion_contrasena) {
+        mensajeErrorConfirmacionContra = 'Las contraseñas no coinciden';
+    }
+
     // Funciones para mostrar el mensaje de error en la pagina
     document.getElementById('error-nombre').innerHTML = mensajeErrorNombre;
     document.getElementById('error-correo').innerHTML = mensajeErrorCorreo;
@@ -60,10 +74,13 @@ function validar_registro() {
     document.getElementById('error-descripcion').innerHTML = mensajeErrorDescripcion;
     document.getElementById('error-grado').innerHTML = mensajeErrorGrado;
     document.getElementById('error-areas').innerHTML = mensajeErrorAreas;
+    document.getElementById('error-contrasena').innerHTML = mensajeErrorContrasena;
+    document.getElementById('error-confirmacion-contra').innerHTML = mensajeErrorConfirmacionContra;
+
 
     // Si alguna variable de mensaje de error tiene contenido, retorna falso; si no, retorna verdadero y envía el formulario
     if (mensajeErrorNombre !== '' || mensajeErrorCorreo !== '' || mensajeErrorFono !== '' || mensajeErrorCargo !== '' || 
-    mensajeErrorDescripcion !== '' || mensajeErrorGrado !== '' || mensajeErrorAreas !== '') {
+    mensajeErrorDescripcion !== '' || mensajeErrorGrado !== '' || mensajeErrorAreas !== '' || mensajeErrorContrasena !== '' || mensajeErrorConfirmacionContra !== '' ) {
         return false;
     }else{
         return true;
