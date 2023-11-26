@@ -1,4 +1,20 @@
+@font-face {
+    font-family: MontserratSemibold;
+    src: url(fonts/Montserrat\ Semibold.ttf);
+}
+@font-face {
+    font-family: MontserratRegular;
+    src: url(fonts/Montserrat\ Regular.ttf);
+}
+@font-face {
+    font-family: TrebuchetMS;
+    src: url(fonts/TrebuchetMS.ttf);
+}
 
+body{
+    padding: 0;
+    margin: 0;
+}
 
 
 .header{
@@ -8,7 +24,7 @@
     align-items: center;
     height: 85px;
     padding: 5px 10%;
-    font-size: 20px;
+    font-family: MontserratSemibold;
 }
 
 .header .logo{
@@ -28,7 +44,6 @@
 
 .header .nav-links{
     list-style: none;
-    font-size: 20px;
 }
 
 .header .nav-links li{
@@ -42,13 +57,8 @@
 }
 
 .header .nav-links a{
-    font-size: 700;
     color: #eceff1;
     text-decoration: none;    
-}
-
-.header .nav-links li a:hover{
-    color:  #dbca11;
 }
 
 .header .btn button{
@@ -60,7 +70,6 @@
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 20px;
     transition: all 0.3s ease 0s;
 }
 
