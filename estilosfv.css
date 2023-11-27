@@ -59,7 +59,7 @@ body{
     padding: 9px 25px;
     background: #eceff1;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
@@ -96,12 +96,57 @@ body{
 /*---Informacion personal---*/
 .infopersonal{
     background-color: white;
-    margin: 40px 80px 20px 80px;
+    margin: 40px 50px 20px 80px;
     display: flex;
+}
+.fotodeperfil{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 500px;
+    width: 450px;
+}
+.cargoacademico{
+    font-weight: 50;
+}
+.nombreacademico::after{
+    content: "";
+    display: block;
+    border-bottom: 2px solid;
+    margin-top: 5px;
+}
+
+.datospersonales{
+   padding: 0 30px 0 30px;
 }
 .descripcion{
     background-color: rgba(229, 229, 229, 0.956);
     font-size: 20px;
     padding: 10px;
     border-radius: 20px;
+    font-family: TrebuchetMS;
+}
+
+/*---Articulos---*/
+
+.articulos{
+    background-color: rgba(229, 229, 229, 0.956);
+    margin: 40px 80px 20px 80px;
+    border-radius: 20px;
+}
+
+/*---Horario---*/
+
+.horario{
+    background-color: rgba(229, 229, 229, 0.956);
+    margin: 40px 80px 20px 80px;
+    padding: 0 0 40px 0;
+    border-radius: 20px;
+    
+}
+.testhorario{
+    background-color: rgb(172, 172, 172);
+    margin: 50px;
+    padding: 100px;
+}
+.tesis{
+    margin: 40px 80px 20px 80px;
 }
