@@ -19,167 +19,178 @@
         </div>
         <nav>
            <ul class="nav-links">
-                <li><a href="#">Boton 1</a></li>
-                <li><a href="#">Boton 2</a></li>
-                <li><a href="#">Boton 3</a></li>
+                <li><a class="nav-link" href="#">Boton 1</a></li>
+                <li><a class="nav-link" href="#">Boton 2</a></li>
+                <li><a class="nav-link" href="#">Boton 3</a></li>
            </ul>            
         </nav>
         <a class="btn" href="#"><button>Nombre</button></a>
     </header>
     <!--Botones de redirección hacia la misma página-->
     <div class="navegacion">
-        <a href="#" class="enlace"><h2 class="titulo">Enlace 1</h2></a>
-        <a href="#" class="enlace"><h2 class="titulo">Enlace 2</h2></a>
-        <a href="#" class="enlace"><h2 class="titulo">Enlace 3</h2></a>
-        <a href="#" class="enlace"><h2 class="titulo">Enlace 4</h2></a>
+        <a href="#scrollspyHeading1" class="enlace"><h2 class="titulo">Enlace 1</h2></a>
+        <a href="#scrollspyHeading2" class="enlace"><h2 class="titulo">Enlace 2</h2></a>
+        <a href="#scrollspyHeading3" class="enlace"><h2 class="titulo">Enlace 3</h2></a>
+        <a href="#scrollspyHeading4" class="enlace"><h2 class="titulo">Enlace 4</h2></a>
     </div>
-    <!--Informacion personal-->
-    <div class="infopersonal">
-        <div class="fotodeperfil">
-            <img src="img/icono.png" width="450" height="500">
-        </div>
-        <div class="datospersonales">
-            <h1 class="nombreacademico">Nombre Académico</h1>
-            <h4 class="cargoacademico">Cargo del académico</h4>
-            <div class="descripcion">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Reprehenderit error facere itaque non maxime a blanditiis 
-                    molestias expedita sed nesciunt, odit quasi dignissimos q
-                    uas? Qui, voluptas laborum? Nisi, totam sit.
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Reprehenderit error facere itaque non maxime a blanditiis 
-                    molestias expedita sed nesciunt, odit quasi dignissimos q
-                    uas? Qui, voluptas laborum? Nisi, totam sit.
-                </p>
-                <p><strong>Grado académico:</strong>Lorem ipsum dolor sit amet 
-                    consectetur adipisicing elit. Alias recusandae amet 
-                    repellendus iure soluta eveniet possimus quis accusantium 
-                    officia. Exercitationem, quam fugiat officiis consequuntur 
-                    necessitatibus quos eveniet ducimus tempore excepturi!</p>
 
-                <p><strong>Áreas de interés:</strong>Lorem ipsum dolor sit amet 
-                    consectetur adipisicing elit. Nobis, ipsum, magni nisi ea 
-                    incidunt vitae dolor, provident accusantium alias dicta 
-                    voluptas unde reiciendis similique quo distinctio sunt v
-                    el eum. Explicabo?</p>
-                <p><strong>Contacto:</strong>Links correos numero</p>
+
+    <!--Div para el scrollspy-->
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+
+        <!--Informacion personal-->
+
+        <div class="infopersonal" id="scrollspyHeading1">
+            <div class="fotodeperfil">
+                <img src="img/icono.png" width="450" height="500">
+            </div>
+            <div class="datospersonales">
+                <h1 class="nombreacademico">Nombre Académico</h1>
+                <h4 class="cargoacademico">Cargo del académico</h4>
+                <div class="descripcion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Reprehenderit error facere itaque non maxime a blanditiis 
+                        molestias expedita sed nesciunt, odit quasi dignissimos q
+                        uas? Qui, voluptas laborum? Nisi, totam sit.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Reprehenderit error facere itaque non maxime a blanditiis 
+                        molestias expedita sed nesciunt, odit quasi dignissimos q
+                        uas? Qui, voluptas laborum? Nisi, totam sit.
+                    </p>
+                    <p><strong>Grado académico:</strong>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Alias recusandae amet 
+                        repellendus iure soluta eveniet possimus quis accusantium 
+                        officia. Exercitationem, quam fugiat officiis consequuntur 
+                        necessitatibus quos eveniet ducimus tempore excepturi!</p>
+
+                    <p><strong>Áreas de interés:</strong>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Nobis, ipsum, magni nisi ea 
+                        incidunt vitae dolor, provident accusantium alias dicta 
+                        voluptas unde reiciendis similique quo distinctio sunt v
+                        el eum. Explicabo?</p>
+                    <p><strong>Contacto:</strong>Links correos numero</p>
+                    
+                </div>
                 
             </div>
-            
+        </div>
+
+        <!--Articulos-->
+
+        <div class="articulos" id="#scrollspyHeading2">
+            <h2>Articulos</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Horario-->
+
+        <div class="horario" id="#scrollspyHeading3">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Horario de atención</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Horario de clases</a>
+                </li>
+            </ul>
+            <div class="testhorario">
+                horario
+            </div>
+        </div>
+
+        <!--Tesis-->
+
+        <div class="tesis" id="scrollspyHeading4">
+            <h2>Tesis</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <!--Articulos-->
-    <div class="articulos">
-        <h2>Articulos</h2>
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
-
-    <!--Horario-->
-
-    <div class="horario">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Horario de atención</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Horario de clases</a>
-            </li>
-        </ul>
-        <div class="testhorario">
-            horario
-        </div>
-    </div>
-
-    <!--Tesis-->
-
-    <div class="tesis">
-        <h2>Tesis</h2>
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
+    
 
 
     <!--Footer-->
