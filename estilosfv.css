@@ -17,6 +17,8 @@ body{
 }
 
 
+/*--Barra de navegación--*/
+
 .header{
     background-color: #364c59;
     display: flex;
@@ -78,9 +80,49 @@ body{
     color: #dbca11;
     transform: scale(1.1);
 }
+
+/*--Footer--*/
+
 .enlacesfooter{
     transition: all 0.5s ease 0s;
 }
 .enlacesfooter:hover{
     padding-left: 6px;
+}
+
+.footer{
+    font-family: TrebuchetMS;
+    margin: 0 200px 0 200px;
+}
+
+/*---------------Index--------------*/
+
+/*---Barra de Redireccion--*/
+
+.navegacion{
+    background-color: #364c59;
+    margin: 20px 20px 0 20px;
+    padding: 30px 220px 30px 220px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.enlace{
+    text-decoration: none;
+    font-family: TrebuchetMS;
+    color: white;
+}
+
+/*---Informacion personal---*/
+
+.infopersonal{
+    background-color: white;
+    margin: 40px 80px 20px 80px;
+    display: flex;
+}
+.descripcion{
+    background-color: rgba(229, 229, 229, 0.956);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 20px;
 }
