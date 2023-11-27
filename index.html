@@ -11,42 +11,47 @@
     crossorigin="anonymous">
 
 </head>
-<body>
+<body class="position-relative" data-spy="scroll" data-target="#navabar-scrollspy">
+    
     <!--Barra de navegacion-->
-    <header class="header">
+
+
+    <header class="header sticky-top navbar nav-scrollspy" id="navabar-scrollspy">
         <div class="logo">
             <img src="img/logo-udacorp-lineablanca.png" alt="Logo de la marca">
         </div>
-        <nav>
-           <ul class="nav-links">
-                <li><a class="nav-link" href="#">Boton 1</a></li>
-                <li><a class="nav-link" href="#">Boton 2</a></li>
-                <li><a class="nav-link" href="#">Boton 3</a></li>
+        <nav class="nav-scrollspy ">
+           <ul class="nav-links text-white">
+                <li class="nav-item">
+                    <a class="nav-link text-reset" href="#informacionpersonal">Informacion personal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-reset" href="#articulos">Artículos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-reset" href="#horario">Horario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-reset" href="#tesis">Tesis</a>
+                </li>
            </ul>            
         </nav>
         <a class="btn" href="#"><button>Nombre</button></a>
     </header>
-    <!--Botones de redirección hacia la misma página-->
-    <div class="navegacion">
-        <a href="#scrollspyHeading1" class="enlace"><h2 class="titulo">Enlace 1</h2></a>
-        <a href="#scrollspyHeading2" class="enlace"><h2 class="titulo">Enlace 2</h2></a>
-        <a href="#scrollspyHeading3" class="enlace"><h2 class="titulo">Enlace 3</h2></a>
-        <a href="#scrollspyHeading4" class="enlace"><h2 class="titulo">Enlace 4</h2></a>
-    </div>
-
+    
 
     <!--Div para el scrollspy-->
 
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
 
         <!--Informacion personal-->
-
-        <div class="infopersonal" id="scrollspyHeading1">
+        <div id="informacionpersonal"></div>
+        <div class="infopersonal pt-5 mt-5" >
             <div class="fotodeperfil">
                 <img src="img/icono.png" width="450" height="500">
             </div>
             <div class="datospersonales">
-                <h1 class="nombreacademico">Nombre Académico</h1>
+                <h1 class="nombreacademico ">Nombre Académico</h1>
                 <h4 class="cargoacademico">Cargo del académico</h4>
                 <div class="descripcion">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -78,8 +83,8 @@
         </div>
 
         <!--Articulos-->
-
-        <div class="articulos" id="#scrollspyHeading2">
+        <div id="articulos" class=" pt-5 mt-5"></div>
+        <div class="articulos">
             <h2>Articulos</h2>
             <table class="table">
                 <thead>
@@ -126,8 +131,8 @@
         </div>
 
         <!--Horario-->
-
-        <div class="horario" id="#scrollspyHeading3">
+        <div id="horario" class="pt-5 "></div>
+        <div class="horario " >
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Horario de atención</a>
@@ -143,7 +148,7 @@
 
         <!--Tesis-->
 
-        <div class="tesis" id="scrollspyHeading4">
+        <div class="tesis pt-5 mt-5" id="tesis">
             <h2>Tesis</h2>
             <table class="table">
                 <thead>

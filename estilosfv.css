@@ -68,6 +68,8 @@ body{
     color: #dbca11;
     transform: scale(1.1);
 }
+
+
 /*--Footer--*/
 .enlacesfooter{
     transition: all 0.5s ease 0s;
@@ -79,6 +81,8 @@ body{
     font-family: TrebuchetMS;
     margin: 0 200px 0 200px;
 }
+
+
 /*---------------Index--------------*/
 /*---Barra de Redireccion--*/
 .navegacion{
@@ -88,14 +92,20 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
+.nav-scrollspy .active{
+    background-color: white;
+}
 .enlace{
     text-decoration: none;
     font-family: TrebuchetMS;
     color: white;
 }
+
+
 /*---Informacion personal---*/
 .infopersonal{
-    background-color: white;
+    
     margin: 40px 50px 20px 80px;
     display: flex;
 }
