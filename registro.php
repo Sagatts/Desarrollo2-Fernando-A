@@ -20,6 +20,12 @@
                 <li><a href="#">Boton 1</a></li>
                 <li><a href="#">Boton 2</a></li>
                 <li><a href="#">Boton 3</a></li>
+<<<<<<< HEAD:registro.php
+=======
+
+                
+
+>>>>>>> 332018fd9ceab6831ffb5444f542151a0f1a9448:registro.html
            </ul>            
         </div>
         <a class="btn" href="#"><button>Nombre</button></a>
