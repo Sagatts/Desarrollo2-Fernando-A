@@ -12,16 +12,13 @@
     <!--Barra de navegacion-->
     <nav class="header">
         <div class="logo">
-            <img src="img/logo-udacorporativo.png" alt="Logo de la marca">
+            <img src="img/logo-udacorp-txtblanco.png" alt="Logo de la marca">
         </div>
         <div>
            <ul class="nav-links">
-                <li><a href="#">Boton 1</a></li>
-                <li><a href="#">Boton 2</a></li>
-                <li><a href="#">Boton 3</a></li>
+                <li><a href="#">Bievenido, Por favor inicie sesion</a></li>
            </ul>            
         </div>
-        <a class="btn" href="#"><button>Nombre</button></a>
     </nav>
 
 
@@ -30,9 +27,9 @@
 
     <section class="formularioinicio">
         <div class="imagensesion">
-            <img src="">
+            <img src="FotosDIICC/_ALX9328.JPG">
         </div>
-        <div>
+        <div class="formulario">
             <h1 class="text-center">Inicio de sesión</h1>
             <form action="" method="get" class="contenedor_formulario_2 row g-3 needs-validation" novalidate>
                 <div>
@@ -51,81 +48,22 @@
                 </div>
                 <button type="submit" class="btn btn-primary" name="btnIngresar_sesion">Iniciar sesión</button>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="text-center">¿No estas registrado? Regístrate <a href="registro.html">Aquí</a></li>
-                    <li class="text-center">¿Has olvidado tu contraseña? Restáurala<a href="">Aquí</a></li>
+                    <li class="text-center">¿No estas registrado? Regístrate <a href="registro.php">Aquí</a></li>
+                    <li class="text-center">¿Has olvidado tu contraseña? Restáurala <a href="">Aquí</a></li>
                 </ul>
             </form>
         </div>
     </section>
 
+    <!--Seccion copyright-->
 
-    <!--Footer-->
+    <div class="copyright">
+        <p>Creada por alumnos de Ingeniería Civil en Computación e informática 2023</p>
+        <p>Departamento de ingeniería y ciencias de la computación</p>
+    </div>
 
 
-    <footer>
-        <div class= "container-fluid ml-5 ms-5">
-            <div class="row p-5 bg-white text-secondary">
-                <!--Columna1-->
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                    <img src="img/logo-udacorporativo.png" width="300" height="94">
-                </div>
-                <!--Columna 2-->
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                    <p class="h3">Informacion</p>
-                    <div class="mb-2 enlacesfooter">
-                        <a class="text-secondary text-decoration-none" href="#">Académicos</a>
-                    </div>
-                    <div class="mb-2 enlacesfooter">
-                        <a class="text-secondary text-decoration-none" href="#">Noticias</a>
-                    </div>
-                    <div class="mb-2 enlacesfooter">
-                        <a class="text-secondary text-decoration-none" href="#">Eventos</a>
-                    </div>
-                    <div class="mb-2 enlacesfooter">
-                        <a class="text-secondary text-decoration-none" href="#">Publicaciones</a>
-                    </div>
-                </div>
-                <!--Columna 3-->
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                    <p class="h3">Links</p>
-                    <div class="mb-2 enlacesfooter">
-                        <a class="text-secondary text-decoration-none" href="#">Intranet Alumnos</a>
-                    </div>
-                    <div class="mb-2 enlacesfooter">
-                        <a class="text-secondary text-decoration-none" href="#">Intranet Académicos</a>
-                    </div>
-                    <div class="mb-2 enlacesfooter">
-                        <a class="text-secondary text-decoration-none" href="#">Moodle</a>
-                    </div>
-                    <div class="mb-2 enlacesfooter">
-                        <a class="text-secondary text-decoration-none" href="#">Biblioteca</a>
-                    </div>
-                    <div class="mb-2 enlacesfooter">
-                        <a class="text-secondary text-decoration-none" href="#">FSCU</a>
-                    </div>
-                    <div class="mb-2 enlacesfooter">
-                        <a class="text-secondary text-decoration-none" href="#">Facultad de Ingenieria</a>
-                    </div>
-                    <div class="mb-2 enlacesfooter">
-                        <a class="text-secondary text-decoration-none" href="#">Instagram</a>
-                    </div>
-                </div>
-                <!--Columna 4-->
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                    <p class="h3">Contactos</p>
-                    <div class="mb-2">
-                        <p>Ubícanos en<br>Copiapó, Av. Copayapu 485</p>
-                    </div>
-                    <div class="mb-2">
-                        <p>(52) 2 255555</p>
-                    </div>
-                    <div class="mb-2">
-                        <p>anakarina.pena@uda.cl</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="js/validacion_boostrap.js"></script>
