@@ -1,14 +1,4 @@
-.contenedor_formulario{
-    width: 40%;
-    margin: auto;
-}
-.contenedor_formulario_2{
-    width: 30%;
-    margin: auto;
-}
-.bg_footer{
-    background-color: #364c59;
-}
+
 
 @font-face {
     font-family: MontserratSemibold;
@@ -36,7 +26,7 @@ body{
     align-items: center;
     height: 85px;
     padding: 5px 10%;
-    font-family: MontserratSemibold;
+    font-family: TrebuchetMS;
 }
 
 .header .logo{
@@ -96,3 +86,65 @@ body{
 .enlacesfooter:hover{
     padding-left: 6px;
 }
+
+/*---------formulario inicio----------*/
+
+.formularioinicio{
+    display: flex;
+    border-radius: 20px;
+    background-color: rgb(218, 215, 215);
+    margin: 100px 300px 200px 300px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.formularioinicio img{
+    width: 600px;
+    height: 700px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.formulario{
+    width: 600px;
+    margin-top: 150px;
+}
+
+/*------Formulario registro------*/
+
+
+.contenedor_formulario{
+    width: 40%;
+    margin: auto;
+}
+.formularioregistro{
+    display: flex;
+    border-radius: 20px;
+    background-color: rgb(218, 215, 215);
+    margin: 100px 200px 200px 200px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.formularioregistro img{
+    width: 700px;
+    height: 1042px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+
+/*------Formulario inicio sesion------*/
+.contenedor_formulario_2{
+    width: 60%;
+    margin: auto;
+    font-family: TrebuchetMS;
+}
+
+/*-----Cpyright-----*/
+
+.copyright{
+    background-color: #364c59;
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+    font-size: 17px;
+    padding: 40px 400px 40px 400px;
+    font-family: TrebuchetMS;
+}
+
