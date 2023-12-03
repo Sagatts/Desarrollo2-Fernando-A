@@ -28,7 +28,7 @@
     <section>
         <div class="contenedor_formulario">
             <h1 class="text-center">Registro</h1>
-            <form action="" method="GET" class="row g-3 needs-validation" onsubmit="return validar_registro()" novalidate>
+            <form action="insertar_registro.php" method="GET" class="row g-3 needs-validation" enctype="multipart/form-data" onsubmit="return validar_registro()" novalidate>
                 <div>
                     <label for="I_nombre">Nombre:</label>
                     <input type="text" class="form-control" name="R_nombre" id="I_nombre">
@@ -51,7 +51,7 @@
                 </div>
                 <div>
                     <label for="I_descripcion">Descripción:</label>
-                    <textarea class="form-control" aria-label="With textarea" id="I_descripcion"></textarea>
+                    <textarea class="form-control" aria-label="With textarea" name="R_descripcion" id="I_descripcion"></textarea>
                     <div id="error-descripcion" class="text-danger"></div>
                 </div>
                 <div>
@@ -74,31 +74,32 @@
                     <div class="row align-items-start">
                         <div class="col-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="I_check1" name="AreasInteres[]">
-                                <label class="form-check-label" for="I_check1">Gestión informática</label>
+                                <input class="form-check-input" type="checkbox" id="I_check1" name="AreasInteres[]" value="Gestion_informatica">
+                                <label class="form-check-label" for="I_check1" value="Gestion_informatica">Gestión informática</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="I_check2" name="AreasInteres[]">
-                                <label class="form-check-label" for="I_check2">Ciencia de datos</label>
+                                <input class="form-check-input" type="checkbox" id="I_check2" name="AreasInteres[]" value="Ciencia_de_datos">
+                                <label class="form-check-label" for="I_check2" value="Ciencia_de_datos">Ciencia de datos</label>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="I_check3" name="AreasInteres[]">
-                                <label class="form-check-label" for="I_check3">Ingeniería de software</label>
+                                <input class="form-check-input" type="checkbox" id="I_check3" name="AreasInteres[]" value="Ingenieria_de_software">
+                                <label class="form-check-label" for="I_check3" value="Ingenieria_de_software">Ingeniería de software</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="I_check4" name="AreasInteres[]">
-                                <label class="form-check-label" for="I_check4">Informática educativa</label>
+                                <input class="form-check-input" type="checkbox" id="I_check4" name="AreasInteres[]" value="Informatica_educativa">
+                                <label class="form-check-label" for="I_check4" value="Informatica_educativa">Informática educativa</label>
                             </div>
                         </div>
                     </div>
                     <div id="error-areas" class="text-danger"></div>
                 </div>
                 <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupFile01">Imagen de perfil:</label>
-                    <input type="file" class="form-control" id="inputGroupFile01">
+                    <label class="input-group-text" for="I_imagen">Imagen de perfil:</label>
+                    <input type="file" class="form-control" id="I_imagen" name="imagenPerfil">
                 </div>
+                <div id="error-imagen" class="text-danger"></div>
                 <button type="submit" class="btn btn-primary" onclick="alert('¿Estas seguro de enviar estos datos?')">Enviar</button>
                 <p class="text-center">¿Ya estás registrado? Inicia sesión <a href="inicio_de_sesion.html">Aquí</a></p>
             </form>

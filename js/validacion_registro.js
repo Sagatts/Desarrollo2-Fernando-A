@@ -10,6 +10,7 @@ function validar_registro() {
     var registro_grado = document.getElementById('I_grado').value;
     var registro_contrasena = document.getElementById('I_contrasena').value;
     var registro_confirmacion_contrasena = document.getElementById('I_confirmacion_contrasena').value;
+    var registro_imagen = document.getElementById('I_imagen');
 
 
     // Variables que guardan el mensaje de error
@@ -22,6 +23,7 @@ function validar_registro() {
     var mensajeErrorAreas = '';
     var mensajeErrorContrasena = '';
     var mensajeErrorConfirmacionContra = '';
+    var mensajeErrorImagen = '';
 
     // Condiciones para la validación (separados por que son mensajes diferentes)
     if (registro_nombre === '') {
@@ -66,6 +68,19 @@ function validar_registro() {
         mensajeErrorConfirmacionContra = 'Las contraseñas no coinciden';
     }
 
+    if (registro_imagen.files.length === 0) {
+        mensajeErrorImagen = 'Por favor, seleccione una imagen de perfil';
+    }else {
+        var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+        var maxFileSizeMB = 5;
+
+        if (!allowedExtensions.exec(registro_imagen.value)) {
+            mensajeErrorImagen = 'Formato de imagen no válido. Por favor, seleccione una imagen con formato jpg, jpeg o png';
+        } else if (registro_imagen.files[0].size > maxFileSizeMB * 1024 * 1024) {
+            mensajeErrorImagen = 'La imagen seleccionada supera el tamaño máximo permitido de ' + maxFileSizeMB + ' MB';
+        }
+    }
+
     // Funciones para mostrar el mensaje de error en la pagina
     document.getElementById('error-nombre').innerHTML = mensajeErrorNombre;
     document.getElementById('error-correo').innerHTML = mensajeErrorCorreo;
@@ -76,11 +91,11 @@ function validar_registro() {
     document.getElementById('error-areas').innerHTML = mensajeErrorAreas;
     document.getElementById('error-contrasena').innerHTML = mensajeErrorContrasena;
     document.getElementById('error-confirmacion-contra').innerHTML = mensajeErrorConfirmacionContra;
+    document.getElementById('error-imagen').innerHTML = mensajeErrorImagen;
 
 
     // Si alguna variable de mensaje de error tiene contenido, retorna falso; si no, retorna verdadero y envía el formulario
-    if (mensajeErrorNombre !== '' || mensajeErrorCorreo !== '' || mensajeErrorFono !== '' || mensajeErrorCargo !== '' || 
-    mensajeErrorDescripcion !== '' || mensajeErrorGrado !== '' || mensajeErrorAreas !== '' || mensajeErrorContrasena !== '' || mensajeErrorConfirmacionContra !== '' ) {
+    if (mensajeErrorNombre !== '' || mensajeErrorCorreo !== '' || mensajeErrorFono !== '' || mensajeErrorCargo !== '' || mensajeErrorDescripcion !== '' || mensajeErrorGrado !== '' || mensajeErrorAreas !== '' || mensajeErrorContrasena !== '' || mensajeErrorConfirmacionContra !== '' || mensajeErrorImagen !== '') {
         return false;
     }else{
         return true;

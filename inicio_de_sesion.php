@@ -30,7 +30,7 @@
 
     <section class="formularioinicio">
         <div class="imagensesion">
-            <img src=""
+            <img src="">
         </div>
         <div>
             <h1 class="text-center">Inicio de sesión</h1>
