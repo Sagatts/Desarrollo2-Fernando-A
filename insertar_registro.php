@@ -2,39 +2,34 @@
     include("conexion.php");
     $con = conectar();
 
-    $Nombre_Re = $_GET["R_nombre"];
-    $Correo_Re = $_GET["R_correo"];
-    $Fono_Re = $_GET["R_fono"];
-    $Cargo_Re = $_GET["R_cargo"];
-    $Descripcion_Re = $_GET["R_descripcion"];
-    $Grado_Re = $_GET["R_grado"];
-    $Contrasena_Re = $_GET["R_contrasena"];
-    $Confirmacion_C_Re = $_GET["R_confirmacion_contrasena"];
+    $Nombre_Re = $_POST["R_nombre"];
+    $Correo_Re = $_POST["R_correo"];
+    $Fono_Re = $_POST["R_fono"];
+    $Cargo_Re = $_POST["R_cargo"];
+    $Descripcion_Re = $_POST["R_descripcion"];
+    $Grado_Re = $_POST["R_grado"];
+    $Contrasena_Re = $_POST["R_contrasena"];
 
-    $Areas_de_interes_Re = isset($_GET['AreasInteres']) ? $_GET['AreasInteres'] : [];
-    $Areas_de_interes_Re_Str = implode("-", $Areas_de_interes_Re);
+    $Areas_de_interes_Re = isset($_POST['AreasInteres']) ? $_POST['AreasInteres'] : [];
+    $Areas_de_interes_Re_Str = implode(", ", $Areas_de_interes_Re);
 
-    // Manejo de carga de archivo
-    $Imagen_Re = '';
-    $Imagen_de_Perfil = '';  // Variable para almacenar la ruta de la imagen
+    $Imagen = '';
 
-    if(isset($_FILES["imagenPerfil"]) && $_FILES["imagenPerfil"]["size"] > 0){
-        $Imagen_Re = $_FILES["imagenPerfil"];
-        $Imagen_name = $Imagen_Re["name"];
-        $Imagen_tipo = $Imagen_Re["type"];
-        $Ruta_provisional = $Imagen_Re["tmp_name"];
-        $Imagen_Tamano = $Imagen_Re["size"];
-        $Imagen_dimensiones = getimagesize($Ruta_provisional);
-        $Ancho = $Imagen_dimensiones[0];
-        $Alto = $Imagen_dimensiones[1];
+    if(isset($_FILES["R_imagen_perfil"])){
+        $file = $_FILES["R_imagen_perfil"];
+        $Nombre_I = $file["name"];
+
+        $Ruta_provisional= $file["tmp_name"];
+
         $Carpeta = "fotos/";
 
-        $src = $Carpeta . $Imagen_name;
+        $src = $Carpeta.$Nombre_I;
         move_uploaded_file($Ruta_provisional, $src);
-        $Imagen_de_Perfil = "fotos/" . $Imagen_name;
+        $Imagen_de_Perfil= "fotos/".$Nombre_I;
     }
 
-    $sql = "INSERT INTO profesores (Nombre, Correo, Fono, Cargo, Descripcion, Grado, Contrasena, Confirmacion_C, Areas, Imagen_perfil) VALUES ('$Nombre_Re', '$Correo_Re', '$Fono_Re', '$Cargo_Re', '$Descripcion_Re', '$Grado_Re', '$Contrasena_Re', '$Confirmacion_C_Re', '$Areas_de_interes_Re_Str', '$Imagen_de_Perfil')";
+    $sql = "INSERT INTO profesores (Nombre, Correo, Fono, Cargo, Descripcion, Grado, Contrasena, Areas, Imagen_perfil) 
+    VALUES ('$Nombre_Re', '$Correo_Re', '$Fono_Re', '$Cargo_Re', '$Descripcion_Re', '$Grado_Re', '$Contrasena_Re', '$Areas_de_interes_Re_Str', '$Imagen_de_Perfil')";
 
     $query = mysqli_query($con, $sql);
 
