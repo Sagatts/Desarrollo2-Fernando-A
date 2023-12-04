@@ -33,7 +33,7 @@
         </div>
         <div class="contenedor_formulario">
             <h1 class="text-center">Registro</h1>
-            <form action="insertar_registro.php" method="GET" class="row g-3 needs-validation" enctype="multipart/form-data" onsubmit="return validar_registro()" novalidate>
+            <form action="insertar_registro.php" method="POST" class="row g-3 needs-validation" enctype="multipart/form-data" onsubmit="return validar_registro()" novalidate>
                 <div>
                     <label for="I_nombre">Nombre:</label>
                     <input type="text" class="form-control" name="R_nombre" id="I_nombre">
@@ -102,7 +102,7 @@
                 </div>
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="I_imagen">Imagen de perfil:</label>
-                    <input type="file" class="form-control" id="I_imagen" name="imagenPerfil">
+                    <input type="file" class="form-control" id="I_imagen" name="R_imagen_perfil">
                 </div>
                 <div id="error-imagen" class="text-danger"></div>
                 <button type="submit" class="btn btn-primary" onclick="alert('¿Estas seguro de enviar estos datos?')">Enviar</button>

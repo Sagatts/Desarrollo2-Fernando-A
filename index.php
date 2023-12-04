@@ -1,8 +1,9 @@
 <?php
+    //Se traen los datos del profesores a partir del correo
     include('conexion.php');
     $con=conectar();
 
-    $correo_persona = "fernando.arriagada.22@alumnos.uda.cl";
+    $correo_persona = "andres.alfaro@uda.cl";
 
     $consulta = "SELECT * FROM profesores WHERE correo = '$correo_persona'";
     $resultado = mysqli_query($con, $consulta);
@@ -10,14 +11,19 @@
     if ($resultado) {
         $profesor = mysqli_fetch_assoc($resultado);
 
+        //Se guardan en variables los distintos datos
         $Nombre = $profesor['Nombre'];
         $Correo = $profesor['Correo'];
         $Fono = $profesor['Fono'];
+        $Cargo = $profesor['Cargo'];
+        $Descripcion = $profesor['Descripcion'];
+        $Grado = $profesor['Grado'];
+        $Areas = $profesor['Areas'];
+        $Imagen_perfil = $profesor['Imagen_perfil'];
+
     } else {
         echo "Error en la consulta: " . mysqli_error($con);
     }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +74,6 @@
         ?>
     </header>
     
-
     <!--Div para el scrollspy-->
 
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
@@ -81,13 +86,14 @@
             <div class="fotodeperfil">
                 <div class="cajafoto">
                     <div class="imagencaja">
-                        <img src="img/Andres.jpg">
+                        <!--Se coloca una condicion para mostrar un mensaje el caso de q no cargaron los datos desde la BD-->
+                        <?php echo isset($Imagen_perfil) ? "<img src='$Imagen_perfil'>" : "<p>Imagen no disponible</p>"; ?>
                     </div>
                     <div class="contenidocaja">
                         <h5 class="titulocaja">Informacion de contacto</h5>
                         <div class="informacioncaja">
-                            <p>Correo: <?php echo $Correo ?></p>
-                            <p>Fono: <?php echo $Fono ?></p>
+                            <p>Correo: <?php echo isset($Correo) ? $Correo : 'Correo no disponible'; ?></p>
+                            <p>Fono: <?php echo isset($Fono) ? $Fono : 'Fono no disponible'; ?></p>
                         </div>
                     </div>
                 </div>
@@ -95,34 +101,13 @@
 
 
             <div class="datospersonales">
-                <h1 class="nombreacademico ">Nombre Académico</h1>
-                <h4 class="cargoacademico">Cargo del académico</h4>
+                <h1 class="nombreacademico"><?php echo isset($Nombre) ? $Nombre : 'Nombre no disponible'; ?></h1>
+                <h4 class="cargoacademico"><?php echo isset($Cargo) ? $Cargo : 'Cargo no disponible'; ?></h4>
                 <div class="descripcion">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Reprehenderit error facere itaque non maxime a blanditiis 
-                        molestias expedita sed nesciunt, odit quasi dignissimos q
-                        uas? Qui, voluptas laborum? Nisi, totam sit.
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Reprehenderit error facere itaque non maxime a blanditiis 
-                        molestias expedita sed nesciunt, odit quasi dignissimos q
-                        uas? Qui, voluptas laborum? Nisi, totam sit.
-                    </p>
-                    <p><strong>Grado académico:</strong>Lorem ipsum dolor sit amet 
-                        consectetur adipisicing elit. Alias recusandae amet 
-                        repellendus iure soluta eveniet possimus quis accusantium 
-                        officia. Exercitationem, quam fugiat officiis consequuntur 
-                        necessitatibus quos eveniet ducimus tempore excepturi!</p>
-
-                    <p><strong>Áreas de interés:</strong>Lorem ipsum dolor sit amet 
-                        consectetur adipisicing elit. Nobis, ipsum, magni nisi ea 
-                        incidunt vitae dolor, provident accusantium alias dicta 
-                        voluptas unde reiciendis similique quo distinctio sunt v
-                        el eum. Explicabo?</p>
-                   
-                    
+                    <p><?php echo isset($Descripcion) ? $Descripcion : 'Descripción no disponible'; ?></p>
+                    <p><strong>Grado académico:</strong><?php echo isset($Grado) ? $Grado : 'Grado no disponible'; ?></p>
+                    <p><strong>Áreas de interés:</strong><?php echo isset($Areas) ? $Areas : 'Áreas no disponibles'; ?></p>
                 </div>
-                
             </div>
         </div>
 
