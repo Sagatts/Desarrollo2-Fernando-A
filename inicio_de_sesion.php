@@ -31,12 +31,12 @@
         </div>
         <div class="formulario">
             <h1 class="text-center">Inicio de sesión</h1>
-            <form action="" method="get" class="contenedor_formulario_2 row g-3 needs-validation" novalidate>
+            <form action="ingreso_de_sesion.php" method="get" class="contenedor_formulario_2 row g-3 needs-validation" novalidate>
                 <div>
                     <label for="I_inicio_usuario">Correo:</label>
-                    <input type="text" class="form-control" name="Sesion_usuario" id="I_inicio_usuario" required>
+                    <input type="text" class="form-control" name="Sesion_correo" id="I_inicio_correo" required>
                     <div class="invalid-feedback">
-                        Por favor ingrese el usuario.
+                        Por favor ingrese el correo.
                     </div>
                 </div>
                 <div>
