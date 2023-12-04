@@ -17,19 +17,10 @@
         </div>
         <div>
            <ul class="nav-links">
-<<<<<<< HEAD
-                <li><a href="#">Bievenido, Por favor inicie sesion</a></li>
-=======
+                <li><a href="inicio_de_sesion.php">Bievenido, Por favor inicie sesion</a></li>
                 <li><a href="#">Boton 1</a></li>
                 <li><a href="#">Boton 2</a></li>
                 <li><a href="#">Boton 3</a></li>
-<<<<<<< HEAD:registro.php
-=======
-
-                
-
->>>>>>> 332018fd9ceab6831ffb5444f542151a0f1a9448:registro.html
->>>>>>> 68f55e2935467a693ee9f619c39c3e27f1e4baed
            </ul>            
         </div>
     </nav>
@@ -88,22 +79,22 @@
                     <div class="row align-items-start">
                         <div class="col-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="I_check1" name="AreasInteres[]" value="Gestion_informatica">
+                                <input class="form-check-input" type="checkbox" id="I_check1" name="AreasInteres[]" value="Gestión informática">
                                 <label class="form-check-label" for="I_check1" value="Gestion_informatica">Gestión informática</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="I_check2" name="AreasInteres[]" value="Ciencia_de_datos">
-                                <label class="form-check-label" for="I_check2" value="Ciencia_de_datos">Ciencia de datos</label>
+                                <input class="form-check-input" type="checkbox" id="I_check2" name="AreasInteres[]" value="Ciencia de datos">
+                                <label class="form-check-label" for="I_check2" value="Ciencia de datos">Ciencia de datos</label>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="I_check3" name="AreasInteres[]" value="Ingenieria_de_software">
-                                <label class="form-check-label" for="I_check3" value="Ingenieria_de_software">Ingeniería de software</label>
+                                <input class="form-check-input" type="checkbox" id="I_check3" name="AreasInteres[]" value="Ingeniería de software">
+                                <label class="form-check-label" for="I_check3" value="Ingeniería de software">Ingeniería de software</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="I_check4" name="AreasInteres[]" value="Informatica_educativa">
-                                <label class="form-check-label" for="I_check4" value="Informatica_educativa">Informática educativa</label>
+                                <input class="form-check-input" type="checkbox" id="I_check4" name="AreasInteres[]" value="Informática educativa">
+                                <label class="form-check-label" for="I_check4" value="Informática educativa">Informática educativa</label>
                             </div>
                         </div>
                     </div>

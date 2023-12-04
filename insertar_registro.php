@@ -9,7 +9,6 @@
     $Descripcion_Re = $_GET["R_descripcion"];
     $Grado_Re = $_GET["R_grado"];
     $Contrasena_Re = $_GET["R_contrasena"];
-    $Confirmacion_C_Re = $_GET["R_confirmacion_contrasena"];
 
     $Areas_de_interes_Re = isset($_GET['AreasInteres']) ? $_GET['AreasInteres'] : [];
     $Areas_de_interes_Re_Str = implode("-", $Areas_de_interes_Re);
@@ -34,7 +33,7 @@
         $Imagen_de_Perfil = "fotos/" . $Imagen_name;
     }
 
-    $sql = "INSERT INTO profesores (Nombre, Correo, Fono, Cargo, Descripcion, Grado, Contrasena, Confirmacion_C, Areas, Imagen_perfil) VALUES ('$Nombre_Re', '$Correo_Re', '$Fono_Re', '$Cargo_Re', '$Descripcion_Re', '$Grado_Re', '$Contrasena_Re', '$Confirmacion_C_Re', '$Areas_de_interes_Re_Str', '$Imagen_de_Perfil')";
+    $sql = "INSERT INTO profesores (Nombre, Correo, Fono, Cargo, Descripcion, Grado, Contrasena, Areas, Imagen_perfil) VALUES ('$Nombre_Re', '$Correo_Re', '$Fono_Re', '$Cargo_Re', '$Descripcion_Re', '$Grado_Re', '$Contrasena_Re', '$Areas_de_interes_Re_Str', '$Imagen_de_Perfil')";
 
     $query = mysqli_query($con, $sql);
 
