@@ -87,7 +87,7 @@
                                 <label class="form-check-label" for="I_check2" value="Ciencia de datos">Ciencia de datos</label>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-5">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="I_check3" name="AreasInteres[]" value="Ingeniería de software">
                                 <label class="form-check-label" for="I_check3" value="Ingeniería de software">Ingeniería de software</label>
