@@ -1,3 +1,24 @@
+<?php
+    include('conexion.php');
+    $con=conectar();
+
+    $correo_persona = "fernando.arriagada.22@alumnos.uda.cl";
+
+    $consulta = "SELECT * FROM profesores WHERE correo = '$correo_persona'";
+    $resultado = mysqli_query($con, $consulta);
+
+    if ($resultado) {
+        $profesor = mysqli_fetch_assoc($resultado);
+
+        $Nombre = $profesor['Nombre'];
+        $Correo = $profesor['Correo'];
+        $Fono = $profesor['Fono'];
+    } else {
+        echo "Error en la consulta: " . mysqli_error($con);
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +30,6 @@
     rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
     crossorigin="anonymous">
-
 </head>
 <body class="position-relative" data-spy="scroll" data-target="#navabar-scrollspy">
     
@@ -66,8 +86,8 @@
                     <div class="contenidocaja">
                         <h5 class="titulocaja">Informacion de contacto</h5>
                         <div class="informacioncaja">
-                            <p>Correo:</p>
-                            <p>Fono:</p>
+                            <p>Correo: <?php echo $Correo ?></p>
+                            <p>Fono: <?php echo $Fono ?></p>
                         </div>
                     </div>
                 </div>
