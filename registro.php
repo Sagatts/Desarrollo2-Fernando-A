@@ -17,26 +17,8 @@
         </div>
         <div>
            <ul class="nav-links">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <li><a href="#">Bievenido, Por favor inicie sesion</a></li>
-=======
-                <li><a href="#">Boton 1</a></li>
-                <li><a href="#">Boton 2</a></li>
-                <li><a href="#">Boton 3</a></li>
-<<<<<<< HEAD:registro.php
-=======
 
-                
-
->>>>>>> 332018fd9ceab6831ffb5444f542151a0f1a9448:registro.html
->>>>>>> 68f55e2935467a693ee9f619c39c3e27f1e4baed
-=======
-                <li><a href="inicio_de_sesion.php">Bievenido, Por favor inicie sesion</a></li>
-                <li><a href="#">Boton 1</a></li>
-                <li><a href="#">Boton 2</a></li>
-                <li><a href="#">Boton 3</a></li>
->>>>>>> main
            </ul>            
         </div>
     </nav>
