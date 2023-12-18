@@ -6,9 +6,11 @@ session_start();
 
 $con = conectar();
 
+
 if (isset($_POST["btnIngresar_sesion"])) {
     $correo_login = $_POST["sesion_correo"];
     $Contrasena_login = $_POST["sesion_contrasena"];
+
 
     // Obtener el hash almacenado en la base de datos
     $query = "SELECT contrasena FROM informacion WHERE correo = '$correo_login'";

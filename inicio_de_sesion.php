@@ -16,7 +16,9 @@
         </div>
         <div>
            <ul class="nav-links">
+
                 <li><a href="inicio_de_sesion.php">Bienvenido, Por favor inicie sesion</a></li>
+
            </ul>            
         </div>
     </nav>
@@ -28,7 +30,9 @@
         </div>
         <div class="formulario">
             <h1 class="text-center">Inicio de sesión</h1>
+
             <form action="ingreso_de_sesion.php" method="POST" class="contenedor_formulario_2 row g-3 needs-validation" onsubmit="return validar_inicio_sesion()" novalidate>
+
                 <div class="mb-4">
                     <label for="I_inicio_usuario">Correo:</label>
                     <input type="text" class="form-control" name="sesion_correo" id="I_inicio_correo" required>
@@ -39,7 +43,9 @@
                     <input type="password" class="form-control" name="sesion_contrasena" id="I_inicio_contrasena" required>
                     <div id="error-contra-sesion" class="text-danger"></div>
                 </div>
+
                 <button type="submit" class="btn btn-primary d-grid" name="btnIngresar_sesion" onclick="alert('¿Estás seguro de enviar estos datos?')">Iniciar sesión</button>
+
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="text-center">¿No estás registrado? Regístrate <a href="registro.php">Aquí</a></li>
                     <li class="text-center">¿Has olvidado tu contraseña? Restáurala <a href="recuperar_contra.php">Aquí</a></li>
