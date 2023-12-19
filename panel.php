@@ -146,10 +146,14 @@ if ($correo_persona == "admin.admin@uda.cl") {
 </ul>
 
 <!--a-->
+<<<<<<< HEAD
     
+=======
+>>>>>>> 5ff8292774f80e8929d1dd0ad5a8e3ef543980e2
 
     <div class="tab-content mt-2">
         <!-- Informacion -->
+
         <div class="tab-pane fade show active" id="tabla1">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ingresarModal1">Ingresar datos</button>
             <!-- Modal para ingresar datos en la tabla 'informacion' -->
@@ -247,12 +251,22 @@ if ($correo_persona == "admin.admin@uda.cl") {
                 <thead class="table-success table-striped">
                     <tr>
                         <th>Id</th>
+<<<<<<< HEAD
                         <th>Imagen</th>
+=======
+
+                        <th>imagen</th>
+>>>>>>> 5ff8292774f80e8929d1dd0ad5a8e3ef543980e2
                         <th>Nombre</th>
                         <th>Email</th>
                         <th>Cargo</th>
                         <th>Informacion</th>
+<<<<<<< HEAD
                         <th>Area</th>
+=======
+                        <th>Areas</th>
+
+>>>>>>> 5ff8292774f80e8929d1dd0ad5a8e3ef543980e2
                         <th></th>
                         <th></th>
                     </tr>
@@ -268,7 +282,12 @@ if ($correo_persona == "admin.admin@uda.cl") {
                         <td><?php echo $row['nombre'] ?></td>
                         <td><?php echo $row['correo'] ?></td>
                         <td><?php echo $row['cargo'] ?></td>
+<<<<<<< HEAD
                         <td><?php echo substr($row['descripcion'], 0, 100); ?></td>
+=======
+
+                        <td><?php echo $row['descripcion'] ?></td>
+>>>>>>> 5ff8292774f80e8929d1dd0ad5a8e3ef543980e2
                         <td><?php echo $row['areasInteres'] ?></td>
 
                         <td><button type="button" class="btn btn-info" data-bs-toggle="modal"data-bs-target="#editModal2<?php echo $row['id']; ?>">Editar</button></td>
@@ -508,7 +527,13 @@ if ($correo_persona == "admin.admin@uda.cl") {
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
+<<<<<<< HEAD
                             <h5 class="modal-title" id="exampleModalLabel">Ingresar Datos</h5>
+=======
+
+                            <h5 class="modal-title" id="exampleModalLabel">Ingresar Dato</h5>
+
+>>>>>>> 5ff8292774f80e8929d1dd0ad5a8e3ef543980e2
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
