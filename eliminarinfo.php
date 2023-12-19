@@ -23,7 +23,7 @@ $sql = "DELETE FROM informacion WHERE id = $idEliminar";
 
 // Ejecutar la consulta
 if ($con->query($sql) === TRUE) {
-    echo "Registro eliminado correctamente";
+    echo "<script>alert('¡Eliminacion exitosa!');</script>";
     header("refresh:0;url=panel.php");
 } else {
     echo "Error al eliminar registro: " . $con->error;

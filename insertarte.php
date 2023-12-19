@@ -4,22 +4,22 @@ include("conexion.php");
 $con = conectar();
 
 // Obtener los datos del formulario
-$nuevoTitulo = $_POST['R_titulo'];
-$nuevoAnio = $_POST['R_anio'];
-$nuevoLink = $_POST['R_link'];
+$nuevoTitulo = $_POST['R_titulo_tesis'];
+$nuevoAnio = $_POST['R_anio_tesis'];
+$nuevoLink = $_POST['R_link_tesis'];
 $idprofesor=$_SESSION['id'];
 
 // Query para insertar los datos
-$sql = "INSERT INTO tesis (titulo, anio, link,idprofesor) VALUES ('$nuevoTitulo', '$nuevoAnio', '$nuevoLink','$idprofesor')";
+$sql = "INSERT INTO tesis (titulo, anio, link,idprofesor) VALUES (?, ?, ?, ?)";
 
 $stmt = $con->prepare($sql);
 
 if ($stmt) {
     // Vincular parámetros
-    $stmt->bind_param("ssss", $nuevoTitulo, $nuevoAnio, $nuevoLink);
+    $stmt->bind_param("ssss", $nuevoTitulo, $nuevoAnio, $nuevoLink,$idprofesor);
 
     if ($stmt->execute()) {
-        echo "Datos insertados correctamente";
+        echo "<script>alert('¡Ingreso exitoso!');</script>";
         header("refresh:0;url=panel.php");
     } else {
         echo "Error al insertar datos: " . $stmt->error;

@@ -17,13 +17,13 @@ $rutaArchivo = "archivos/" . $nombreArchivo;
 move_uploaded_file($_FILES['archivo']['tmp_name'], $rutaArchivo);
 
 // Query para insertar los datos
-$sql = "INSERT INTO publicaciones (titulo, fecha, autor, revision, acceso, archivo,idprofesor) VALUES ('$nuevoTitulo','$nuevaFecha','$nuevoAutor','$nuevaRevision','$nuevoAcceso','$rutaArchivo','$idprofesor')";
+$sql = "INSERT INTO publicaciones (titulo, fecha, autor, revision, acceso, archivo,idprofesor) VALUES (?,?,?,?,?,?,?)";
 
 $stmt = $con->prepare($sql);
 
 if ($stmt) {
     // Vincular parámetros
-    $stmt->bind_param("ssssss", $nuevoTitulo, $nuevaFecha, $nuevoAutor, $nuevaRevision, $nuevoAcceso, $rutaArchivo);
+    $stmt->bind_param("sssssss", $nuevoTitulo, $nuevaFecha, $nuevoAutor, $nuevaRevision, $nuevoAcceso, $rutaArchivo,$idprofesor);
 
     if ($stmt->execute()) {
         echo "<script>alert('¡Ingreso!');</script>";

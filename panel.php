@@ -144,13 +144,6 @@ if ($correo_persona == "admin.admin@uda.cl") {
         <a class="nav-link" id="tab4" data-bs-toggle="tab" href="#tabla4" >Tesis</a>
     </li>
 </ul>
-
-<!--a-->
-<<<<<<< HEAD
-    
-=======
->>>>>>> 5ff8292774f80e8929d1dd0ad5a8e3ef543980e2
-
     <div class="tab-content mt-2">
         <!-- Informacion -->
 
@@ -238,7 +231,7 @@ if ($correo_persona == "admin.admin@uda.cl") {
                                     <label class="input-group-text" for="inputGroupFile01">Imagen de perfil:</label>
                                     <input type="file" class="form-control" id="inputGroupFile01" name="imagen">
                                 </div>
-                                <button type="submit" class="btn btn-primary" onclick="alert('¿Estas seguro de enviar estos datos?')">Enviar</button>
+                                <button type="submit" class="btn btn-primary" onclick="return confirm('¿Estas seguro de enviar estos datos?')">Enviar</button>
                             </form>
                         </div>
                     </div>
@@ -251,22 +244,12 @@ if ($correo_persona == "admin.admin@uda.cl") {
                 <thead class="table-success table-striped">
                     <tr>
                         <th>Id</th>
-<<<<<<< HEAD
                         <th>Imagen</th>
-=======
-
-                        <th>imagen</th>
->>>>>>> 5ff8292774f80e8929d1dd0ad5a8e3ef543980e2
                         <th>Nombre</th>
                         <th>Email</th>
                         <th>Cargo</th>
                         <th>Informacion</th>
-<<<<<<< HEAD
-                        <th>Area</th>
-=======
                         <th>Areas</th>
-
->>>>>>> 5ff8292774f80e8929d1dd0ad5a8e3ef543980e2
                         <th></th>
                         <th></th>
                     </tr>
@@ -282,14 +265,8 @@ if ($correo_persona == "admin.admin@uda.cl") {
                         <td><?php echo $row['nombre'] ?></td>
                         <td><?php echo $row['correo'] ?></td>
                         <td><?php echo $row['cargo'] ?></td>
-<<<<<<< HEAD
                         <td><?php echo substr($row['descripcion'], 0, 100); ?></td>
-=======
-
-                        <td><?php echo $row['descripcion'] ?></td>
->>>>>>> 5ff8292774f80e8929d1dd0ad5a8e3ef543980e2
                         <td><?php echo $row['areasInteres'] ?></td>
-
                         <td><button type="button" class="btn btn-info" data-bs-toggle="modal"data-bs-target="#editModal2<?php echo $row['id']; ?>">Editar</button></td>
                         <div class="modal fade" id="editModal2<?php echo $row['id']; ?>" tabindex="-1"aria-labelledby="editModalLabel<?php echo $row['id']; ?>" aria-hidden="true">
 
@@ -360,17 +337,10 @@ if ($correo_persona == "admin.admin@uda.cl") {
                                             <label class="input-group-text" for="inputGroupFile01">Imagen de perfil:</label>
                                             <input type="file" class="form-control" id="inputGroupFile01" name="imagen" value="imagenes/<?php echo $row['imagen']; ?>">
                                         </div>
-
-                                        <img src="imagenes/<?php echo $row['imagen']; ?>" alt="Imagen de perfil actual" class="mb-3" width="100">
-
                                         <button type="submit" class="btn btn-primary" onclick="return confirm('¿Estás seguro de enviar estos datos?')">Actualizar</button>
-                                        <a href="panel.php" class="btn btn-primary">Volver</a>
-
-                                        </form>
-
-                                    </div>
-                                    <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"data-bs-dismiss="modal">Cerrar</button>
+                                        </form>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -435,8 +405,7 @@ if ($correo_persona == "admin.admin@uda.cl") {
                                     <div id="error-fono" class="text-danger"></div>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary" onclick="alert('¿Estás seguro de enviar estos datos?')">Enviar</button>
-                                <p class="text-center">¿Ya estás registrado? Inicia sesión <a href="inicio_de_sesion.html">Aquí</a></p>
+                                <button type="submit" class="btn btn-primary" onclick="return confirm('¿Estás seguro de enviar estos datos?')">Enviar</button>
                             </form>
                         </div>
                     </div>
@@ -483,12 +452,9 @@ if ($correo_persona == "admin.admin@uda.cl") {
                                         <input type="text" class="form-control mb-3" name="R_anio" placeholder="Año" value="<?php echo $row['anio']; ?>">
                                         <label>Link</label>
                                         <input type="text" class="form-control mb-3" name="R_link" placeholder="url" value="<?php echo $row['link']; ?>">
-                                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                                        <a href="panel.php" class="btn btn-primary">Volver</a>
-                                    </form>
-                                    </div>
-                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary" onclick="return confirm('¿Estás seguro de enviar estos datos?')">Actualizar</button>
                                         <button type="button" class="btn btn-secondary"data-bs-dismiss="modal">Cerrar</button>
+                                    </form>
                                     </div>
                                 </div>
                             </div>
@@ -527,13 +493,7 @@ if ($correo_persona == "admin.admin@uda.cl") {
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-<<<<<<< HEAD
                             <h5 class="modal-title" id="exampleModalLabel">Ingresar Datos</h5>
-=======
-
-                            <h5 class="modal-title" id="exampleModalLabel">Ingresar Dato</h5>
-
->>>>>>> 5ff8292774f80e8929d1dd0ad5a8e3ef543980e2
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -572,8 +532,7 @@ if ($correo_persona == "admin.admin@uda.cl") {
                                     <input type="file" class="form-control" id="inputGroupFile01" name="archivo">
                                 </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary" onclick="alert('¿Estás seguro de enviar estos datos?')">Enviar</button>
-                                <p class="text-center">¿Ya estás registrado? Inicia sesión <a href="inicio_de_sesion.html">Aquí</a></p>
+                                <button type="submit" class="btn btn-primary" onclick="return confirm('¿Estás seguro de enviar estos datos?')">Enviar</button>
                             </form>
                         </div>
                     </div>
@@ -637,13 +596,11 @@ if ($correo_persona == "admin.admin@uda.cl") {
 
                                             <label for="R_archivo">Archivo:</label>
                                             <input type="file" class="form-control" name="archivo">
-                                            
-                                            <button type="submit" class="btn btn-primary">Actualizar</button>
-                                            <a href="panel.php" class="btn btn-primary">Volver</a>
+                                        <div style="padding-top: 10px">
+                                            <button type="submit" class="btn btn-primary" onclick="return confirm('¿Estás seguro de enviar estos datos?')">Actualizar</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        </div>
                                         </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                     </div>
                                 </div>
                             </div>
@@ -678,7 +635,7 @@ if ($correo_persona == "admin.admin@uda.cl") {
         <div class="tab-pane fade" id="tabla4">
 
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ingresarModal4">Ingresar Tesis</button>
-            <!-- Modal para ingresar datos en la tabla 'informacion' -->
+            <!-- Modal para ingresar datos en la tabla 'tesis' -->
             <div class="modal fade" id="ingresarModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -688,24 +645,23 @@ if ($correo_persona == "admin.admin@uda.cl") {
                         </div>
                         <div class="modal-body">
                             <!-- Agrega aquí el formulario para ingresar datos -->
-                            <form action="insertarte.php" method="POST" class="row g-3 needs-validation" onsubmit="return validar_registro()" novalidate>
+                            <form action="insertarte.php" method="POST" class="row g-3 needs-validation" onsubmit="return validar_ingreso_tesis()" novalidate>
                                 <div>
-                                    <label for="I_nombre">Titulo:</label>
-                                    <input type="text" class="form-control" name="R_titulo" id="I_nombre required">
-                                    <div id="error-nombre" class="text-danger"></div>
+                                    <label for="I_titulo_tesis">Titulo:</label>
+                                    <input type="text" class="form-control" name="R_titulo_tesis" id="I_titulo_tesis">
+                                    <div id="error-titulo-tesis" class="text-danger"></div>
                                 </div>
                                 <div>
-                                    <label for="I_correo">Año:</label>
-                                    <input type="date" class="form-control" name="R_anio" id="I_correo">
-                                    <div id="error-correo" class="text-danger"></div>
+                                    <label for="I_anio_tesis">Año:</label>
+                                    <input type="date" class="form-control" name="R_anio_tesis" id="I_anio_tesis">
+                                    <div id="error-anio-tesis" class="text-danger"></div>
                                 </div>
                                 <div>
-                                    <label for="I_fono">Link:</label>
-                                    <input type="text" class="form-control" name="R_link" id="I_fono">
-                                    <div id="error-fono" class="text-danger"></div>
+                                    <label for="I_link_tesis">Link:</label>
+                                    <input type="text" class="form-control" name="R_link_tesis" id="I_link_tesis">
+                                    <div id="error-link-tesis" class="text-danger"></div>
                                 </div>
-                                <button type="submit" class="btn btn-primary" onclick="alert('¿Estas seguro de enviar estos datos?')">Enviar</button>
-                                <p class="text-center">¿Ya estás registrado? Inicia sesión <a href="inicio_de_sesion.html">Aquí</a></p>
+                                <button type="submit" class="btn btn-primary" onclick="return confirm('¿Estás seguro de enviar estos datos?')">Enviar</button>
                             </form>
                         </div>
                     </div>
@@ -733,8 +689,8 @@ if ($correo_persona == "admin.admin@uda.cl") {
                         <td><?php echo $row['titulo'] ?></td>
                         <td><?php echo $row['anio'] ?></td>
                         <td><?php echo $row['link'] ?></td>
-                        <td><button type="button" class="btn btn-info" data-bs-toggle="modal"data-bs-target="#editModal<?php echo $row['idtesis']; ?>">Editar</button></td>
-                        <div class="modal fade" id="editModal<?php echo $row['idtesis']; ?>" tabindex="-1"aria-labelledby="editModalLabel<?php echo $row['idtesis']; ?>" aria-hidden="true">
+                        <td><button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#editModal4<?php echo $row['idtesis']; ?>">Editar</button></td>
+                        <div class="modal fade" id="editModal4<?php echo $row['idtesis']; ?>" tabindex="-1"aria-labelledby="editModalLabel<?php echo $row['idtesis']; ?>" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -763,11 +719,8 @@ if ($correo_persona == "admin.admin@uda.cl") {
                                             </div>
 
                                             <button type="submit" class="btn btn-primary">Actualizar</button>
-                                            <a href="panel.php" class="btn btn-primary">Volver</a>
+                                            <button type="button" class="btn btn-secondary"data-bs-dismiss="modal">Cerrar</button>
                                         </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"data-bs-dismiss="modal">Cerrar</button>
                                     </div>
                                 </div>
                             </div>
@@ -882,6 +835,7 @@ if ($correo_persona == "admin.admin@uda.cl") {
     
     </div>
 </body>
+<script src="js/busqueda_dinamica.js"></script>
 <script src="js/busqueda_dinamica.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

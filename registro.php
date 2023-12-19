@@ -103,7 +103,7 @@
                     <input type="file" class="form-control" id="I_imagen" name="R_imagen_perfil">
                 </div>
                 <div id="error-imagen" class="text-danger"></div>
-                <button type="submit" class="btn btn-primary" onclick="alert('¿Estas seguro de enviar estos datos?')">Enviar</button>
+                <button type="submit" class="btn btn-primary" onclick="return confirm('¿Estas seguro de enviar estos datos?')">Enviar</button>
                 <p class="text-center">¿Ya estás registrado? Inicia sesión <a href="inicio_de_sesion.php">Aquí</a></p>
             </form>
         </div>
